@@ -1,30 +1,24 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
+  <header class="top-bar spread">
+    <nav class="top-bar-nav">
+      <router-link to="#" class="top-bar-link">
+        <i class="icofont-spoon-and-fork"></i>
+        <span>Home</span>
+      </router-link>
+      <router-link to="views/products.html" class="top-bar-link">
+        <span>Products</span>
+      </router-link>
+      <router-link to="views/past-orders.html" class="top-bar-link">
+        <span>Past Orders</span>
+      </router-link>
+    </nav>
+    <!-- <router-link @click="toggleSideBar" class="top-bar-cart-link">
+      <i class="icofont-cart-alt icofont-1x"></i>
+      <span>Cart ({{ totalQuantity }})</span>
+    </router-link> -->
+  </header>
+
+  <!-- Router View Component -->
   <router-view/>
+
 </template>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-nav {
-  padding: 30px;
-}
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
-}
-</style>
