@@ -40,12 +40,11 @@ export default{
     Sidebar
   },
 
-    data(){
-    return {
-      showSideBar: false,
-      inventory: food,
-      cart: {}
-
+  data(){
+  return {
+    showSideBar: false,
+    inventory: food,
+    cart: {}
     }
   },
 
@@ -59,12 +58,10 @@ export default{
   },
 
 methods: {
-    addToCart(name, index)
+    addToCart(name, quantity)
     {
-      if (!this.cart[name]) { this.cart[name] = 0}
-      this.cart[name] += this.inventory[index].quantity
-      this.inventory[index].quantity = 0
-      console.log(this.cart)
+      if(!this.cart[name]) this.cart[name] = 0
+      this.cart[name] += quantity
     },
 
     toggleSideBar(){
